@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metadata and external resources -->
+    <meta charset="UTF-8" />
+    <!-- Specifies the character encoding for the document as UTF-8, supporting a wide range of characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Configures viewport settings for responsive design: width matches device width, initial zoom level is 1.0 -->
+    <title>Responsive Webpage with Form Validation</title>
+    <!-- Sets the title of the web page, displayed in the browser tab -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Links to an external CSS file 'styles.css' for styling the HTML document -->
+  </head>
+  <body>
+    <!-- Main content of the webpage -->
+    <header>
+      <!-- Header section with navigation -->
+      <nav class="navbar">
+        <!-- Navigation bar container -->
+        <div class="logo">9A</div>
+        <!-- Logo or site title with class 'logo' for styling -->
+        <div class="burger" onclick="toggleNav()">&#9776;</div>
+        <!-- Burger menu icon for mobile navigation, triggers 'toggleNav' function on click -->
+        <ul class="nav-links" id="navLinks">
+          <!-- Unordered list of navigation links -->
+          <li><a href="#home">Home</a></li>
+          <!-- Navigation link to the 'Home' section of the page -->
+          <li><a href="#about">About</a></li>
+          <!-- Navigation link to the 'About' section of the page -->
+          <li><a href="#contact">Contact</a></li>
+          <!-- Navigation link to the 'Contact' section of the page -->
+        </ul>
+      </nav>
+    </header>
+
+    <section class="form-section">
+      <!-- Section for the contact form -->
+      <h2>Contact Us</h2>
+      <!-- Heading for the contact form section -->
+      <form onsubmit="return validateForm()">
+        <!-- Contact form with onsubmit event handler calling 'validateForm' function -->
+        <label for="name">Name:</label>
+        <!-- Label for the name input field -->
+        <input type="text" id="name" placeholder="Enter your name" />
+        <!-- Input field for the user's name with a placeholder text -->
+
+        <label for="email">Email:</label>
+        <!-- Label for the email input field -->
+        <input type="email" id="email" placeholder="Enter your email" />
+        <!-- Input field for the user's email address, type="email" ensures email format validation -->
+
+        <label for="message">Message:</label>
+        <!-- Label for the message textarea -->
+        <textarea id="message" placeholder="Your message..."></textarea>
+        <!-- Multi-line input field for the user's message with a placeholder text -->
+
+        <button type="submit">Submit</button>
+        <!-- Submit button to send the form data -->
+      </form>
+      <p id="errorMessage"></p>
+      <!-- Paragraph element for displaying error messages with id 'errorMessage' -->
+    </section>
+
+    <script src="script.js"></script>
+    <!-- Links to an external JavaScript file 'script.js' for form validation and navigation functionality -->
+  </body>
+</html>
